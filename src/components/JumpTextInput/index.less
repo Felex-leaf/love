@@ -1,0 +1,29 @@
+.dontRjumpTextInput {
+    position: relative;
+    margin-top: 20px;
+    &::after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 20px);
+        border-bottom: 1px solid #ddd;
+        left: 0;
+        bottom: 0;
+        margin: 0 10px;
+    }
+    .placeholder {
+        position: absolute;
+        top: 50%;
+        transform: translate(10px, -50%);
+        pointer-events: none;
+        color: #ccc;
+        span {
+            display: inline-block;
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+    }
+    :global {
+        .ant-input:is(:focus, :hover) + div span {
+            transform: translateY(-20px);
+        }
+    }
+}

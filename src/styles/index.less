@@ -1,0 +1,61 @@
+@themeBgColorA: var(--theme-bgColorA);
+@themeBgColorH: var(--theme-bgColorH);
+@themeBgColorW: var(--theme-bgColorW);
+@themeBgColorZ: var(--theme-bgColorZ);
+@themeColorA: var(--theme-ColorA);
+
+.forXs(@content) {
+    @media (max-width: 575px) {
+        @content();
+    }
+}
+
+.forMd(@content) {
+    @media (max-width: 768px) {
+        @content();
+    }
+}
+
+.forLg(@content) {
+    @media (max-width: 992px) {
+        @content();
+    }
+}
+
+.forXl(@content) {
+    @media (max-width: 1199ox) {
+        @content();
+    }
+}
+
+.forXxl(@content) {
+    @media (min-width: 1200px) {
+        @content();
+    }
+}
+
+.forPhone(@content) {
+    @media (max-width: 767px) {
+        @content();
+    }
+}
+
+.forPad(@content) {
+    @media (max-width: 1023px) {
+        @content();
+    }
+}
+
+.forPc(@content) {
+    @media (min-width: 1024px) {
+        @content();
+    }
+}
+
+.ellipsis(@val) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @val;
+    -webkit-box-orient: vertical;
+}
